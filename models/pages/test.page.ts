@@ -3,7 +3,7 @@ export default class TestPage {
     return cy.get('elementSelector');
   }
 
-  anotherElement(name: Pages.Test.ItemType) {
-    return cy.get('elementSelector').find(`:contains("${name}")`);
+  anotherElement(name: TestPage.Test.ItemType) {
+    return this.baseElement.find(`:contains("${name}")`);
   }
 }

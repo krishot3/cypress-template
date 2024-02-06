@@ -1,11 +1,12 @@
 export default class TestEndpoint {
   private readonly baseUrl: string;
+
   constructor(baseUrl: string) {
-    this.baseUrl = `${baseUrl}/test`;
+    this.baseUrl = baseUrl;
   }
 
   test(failOnStatusCode = true) {
-    return cy.request<Endpoints.Test[]>({
+    return cy.request<TestEndpoint.Test[]>({
       method: 'GET',
       url: `${this.baseUrl}`,
       failOnStatusCode,

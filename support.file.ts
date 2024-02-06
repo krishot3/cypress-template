@@ -1,3 +1,3 @@
-import customCommand from "./commands/first.command";
+import customCommand from './commands/first.command';
 
 customCommand();

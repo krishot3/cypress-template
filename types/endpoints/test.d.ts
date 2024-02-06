@@ -1,7 +1,7 @@
 export {};
 
 declare global {
-  namespace Endpoints {
+  namespace TestEndpoint {
     type Test = {
       id: number;
       name: boolean;

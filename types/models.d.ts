@@ -1,18 +1,14 @@
-import TestEndpoint from '../models/endpoints/test.endpoint'
-import TestPage from '../models/pages/test.page'
+import TestEndpoint from '../models/endpoints/test.endpoint';
+import TestPage from '../models/pages/test.page';
 
-export {}
+export {};
 
 declare global {
-  type Endpoints = 'testEndpoint' | 'test1'
+  type Endpoints = 'testEndpoint' | 'test1';
 
-  type EOM<ENDPOINT> = ENDPOINT extends 'testEndpoint'
-    ? TestEndpoint
-    : never
+  type EOM<ENDPOINT> = ENDPOINT extends 'testEndpoint' ? TestEndpoint : never;
 
-  type Pages = 'testPage' | 'test1'
+  type Pages = 'testPage' | 'test1';
 
-  type POM<PAGE> = PAGE extends 'testPage'
-    ? TestPage
-    : never 
+  type POM<PAGE> = PAGE extends 'testPage' ? TestPage : never;
 }

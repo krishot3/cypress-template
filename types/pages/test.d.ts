@@ -1,7 +1,7 @@
 export {};
 
 declare global {
-  namespace Pages {
+  namespace TestPage {
     namespace Test {
       type ItemType = string;
     }
