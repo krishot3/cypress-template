@@ -1,5 +1,6 @@
 describe('API test title', () => {
   it('API test', () => {
-    cy.log('API test').then(() => eom('testEndpoint').test());
+    eom('testEndpoint').test()
+    .then($response => expect($response.body).to.eq('Hello World!'))
   });
 });

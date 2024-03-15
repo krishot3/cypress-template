@@ -1,5 +1,6 @@
 describe('UI test title', () => {
   it('UI test', () => {
-    cy.log('UI test').then(() => pom('testPage').anotherElement('test'));
+    pom('testPage').anotherElement('test')
+    .then($element => expect($element).to.eq('Hello World!'))
   });
 });

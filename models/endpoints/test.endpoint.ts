@@ -2,7 +2,7 @@ export default class TestEndpoint {
   private readonly baseUrl: string;
 
   constructor(baseUrl: string) {
-    this.baseUrl = baseUrl;
+    this.baseUrl = Cypress.env('apiUrl') + baseUrl;
   }
 
   test(failOnStatusCode = true) {
